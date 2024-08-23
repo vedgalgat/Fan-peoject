@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    background-color: blueviolet;
+    overflow-x: hidden;
+   
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 2vw;
+  margin-left: 10vw;
+}
+.fan{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: rgba(26, 2, 2, 0.777);
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+   /* animation-name: spin; */
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+}
+ 
+@keyframes spin{
+    100%{
+
+        transform: rotate(360deg);                   
+    }
+
+
+}
+.fan::after{
+    position: absolute;
+    content: "";
+    height: 8vw;
+    width: 8vw;
+    background-color: rgb(89, 78, 78);
+    /* box-sizing: 50% ; */
+    border-radius: 50%;
+    border: 9px solid silver
+}
+
+.bland{
+    position: absolute;
+    height: 90px;
+    width: 260px;
+    background-color:rgb(251, 249, 249);
+    border-radius: 50px;
+    transform-origin: 50% 50%;
+    /* box-shadow: 0  0 5px white ,0  0 10px white; */
+
+
+}
+.main{
+    width: 290px;
+}
+
+.bland:nth-child(1){
+    transform: rotate(0) translate(160px) rotate(0);
+}
+.bland:nth-child(2){
+
+    transform: rotate(120deg) translate(160px) rotate(0);
+}
+.bland:nth-child(3){
+    transform: rotate(240deg) translate(180px) rotate(0);
+}
+
+button{
+    position: relative;
+    /* display: inline-block; */
+    padding: 5px 15px; 
+    /* margin-top: 2vw; */
+    left: 4vw;
+    top: 2vw;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: yellow;
+    color: red;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: pointer;
+    border: none;
+    outline: none;
+
+}
